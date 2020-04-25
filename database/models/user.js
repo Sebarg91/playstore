@@ -32,13 +32,13 @@ let user = sequelize.define(alias, cols, config)
 
 user.associate = function(models){
     user.hasMany(models.order, {
-        as: order,
-        foreingKey: user_id
+        as: 'order',
+        foreingKey: 'user_id'
     })
     
     user.hasMany(models.application,{
-        as: application,
-        foreingKey: user_id
+        as: 'application',
+        foreingKey: 'user_id'
     })
 }
 

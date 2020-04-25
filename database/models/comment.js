@@ -32,8 +32,8 @@ let comment = sequelize.define(alias, cols, config)
 
 comment.associate = function(models){
     comment.belongsTo(models.order, {
-        as: order,
-        foreingKey: order_id
+        as: 'order',
+        foreingKey: 'order_id'
     })
 }
 

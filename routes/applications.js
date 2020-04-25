@@ -4,6 +4,6 @@ var applicationsController = require('../controllers/applicationsController')
 
 //creacion
 
-router.get('/crear', applicationsController.crear)
+router.get('/create', applicationsController.crear)
 
 module.exports = router;

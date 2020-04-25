@@ -44,16 +44,16 @@ module.exports = function(sequelize, dataTypes) {
 
     application.associate = function(models){
         application.belongsTo(models.categorie, {
-            as: 'categoty',
-            foreingKey: category_id
+            as: 'category',
+            foreingKey: 'category_id'
         })
         application.hasMany(models.order, {
-            as: order,
-            foreingKey: application_id
+            as: 'order',
+            foreingKey: 'application_id'
         })
         application.hasMany(models.user, {
-            as: user,
-            foreingKey: user_id
+            as: 'user',
+            foreingKey: 'user_id'
         })
     }
 

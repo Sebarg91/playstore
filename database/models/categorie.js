@@ -25,7 +25,7 @@ let categorie = sequelize.define(alias, cols, config)
 categorie.associate = function(models){
     categorie.hasMany(models.application, {
         as: 'application',
-        foreingKey: category_id
+        foreingKey: 'category_id'
     })
 }
 

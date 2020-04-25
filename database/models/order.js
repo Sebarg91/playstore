@@ -32,18 +32,18 @@ let order = sequelize.define(alias, cols, config)
 
 order.associate = function(models){
     order.belongsTo(models.user, {
-        as: user,
-        foreingKey: user_id
+        as: 'user',
+        foreingKey: 'user_id'
     })
 
     order.hasMany(models.application, {
-        as: application,
-        foreingKey: application_id
+        as: 'application',
+        foreingKey: 'application_id'
     })
 
     order.hasMany(models.comment,{
-        as: comment,
-        foreingKey: order_id
+        as: 'comment',
+        foreingKey: 'order_id'
     })
 }
 
